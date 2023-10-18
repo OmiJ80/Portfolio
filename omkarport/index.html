@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-500 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white">Omkar Jadhav</h1>
+            <ul class="flex space-x-6 text-white">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-blue-900 text-white py-16 px-4 text-center">
+        <div class="container mx-auto">
+            <h1 class="text-4xl font-bold mb-4">Software Engineer</h1>
+            <p class="text-lg">Passionate about Java development</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="bg-white py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-8">About Me</h2>
+            <p class="text-lg text-gray-700">I've always been fascinated by new technologies and how things work since I was a child.
+                That is why I decided to pursue a career in engineering. After I completed my graduation in 2020. After working for a while, I began researching the IT field and developed a strong interest in it. So, currently I am enrolled in the CDAC course in order to obtain a Diploma in Advanced Computing. After receiving my diploma and gaining the necessary skills to work in the top companies, I hope to enter the IT field and make a successful career there.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-gray-100 py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-8">Projects</h2>
+            <!-- Add your project cards here -->
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+            <h3 class="text-xl font-semibold mb-2">Restaurant billing system with point of sale(POS)</h3>
+            <p class="text-gray-700">Description of the project. Restaurant Billing System and POS (Point of Sales) is a web application developed with the objective of reducing manual work of billing and also retrieve reports on sales and products. Through this we can place food orders and process those orders and fetch bill for the same. It also has a KDS (Kitchen Display System) which is used to display orders in the kitchen automatically and update the the progress of orders. Overall it will manage the orders and replaces the need for printed KOTS(Kitchen Order Ticket.</p>
+            <a href="#" class="text-blue-500 hover:underline">View Project</a>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+            <h3 class="text-xl font-semibold mb-2">Project Name 2</h3>
+            <p class="text-gray-700">Description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="https://project2-link.com" class="text-blue-500 hover:underline">View Project</a>
+        </div>
+
+        
+
+    </section>
+
+    <!-- Contact Section -->
+    <!-- Contact Section -->
+<section id="contact" class="bg-white py-16">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-8">Contact</h2>
+        <form id="contact-form">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700">Name</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded">
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-gray-700">Message</label>
+                <textarea id="message" name="message" class="w-full px-4 py-2 border rounded"></textarea>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Submit</button>
+        </form>
+        <p id="success-message" class="text-green-600 font-semibold mt-4" style="display: none;">Message sent successfully!</p>
+    </div>
+</section>
+<!-- Footer Section -->
+<footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto flex flex-col items-center">
+        <p>&copy; 2023 Omkar Jadhav. All rights reserved.</p>
+        <div class="flex space-x-4 mt-4">
+           
+            <a href="https://github.com/om-jadhav-96?tab=repositories" class="text-blue-500 hover:underline">GitHub</a>
+            <a href="omijadhav6080@gmail.com" class="text-blue-500 hover:underline">Email</a>
+            <a href="https://www.linkedin.com/in/omkar-jadhav-a78912201/" class="text-blue-500 hover:underline" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</footer>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contact-form");
+            const successMessage = document.getElementById("success-message");
+    
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+    
+                // Validate the form
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const message = document.getElementById("message").value;
+    
+                if (name === "" || email === "" || message === "") {
+                    alert("Please fill in all the fields.");
+                } else {
+                    // You can add code here to send the form data to your server.
+                    // For this example, we'll just show a success message.
+                    successMessage.style.display = "block";
+                    form.style.display = "none";
+                }
+            });
+        });
+    </script>
+    
+
+</body>
+</html>
